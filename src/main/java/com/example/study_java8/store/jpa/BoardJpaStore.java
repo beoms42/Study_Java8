@@ -1,14 +1,11 @@
 package com.example.study_java8.store.jpa;
 
 import com.example.study_java8.domain.Board;
-import com.example.study_java8.store.jpa.BoardStore;
 import com.example.study_java8.store.jpa.jpo.BoardJpo;
 import com.example.study_java8.store.jpa.repository.BoardRepository;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
-import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 

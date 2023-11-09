@@ -4,6 +4,7 @@ import com.example.study_java8.domain.Board;
 import com.example.study_java8.store.jpa.jpo.BoardJpo;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface BoardStore {
 
@@ -11,4 +12,9 @@ public interface BoardStore {
 
     void save(BoardJpo boardJpo);
 
+    void deleteById(String title);
+
+    void update(Board board);
+
+    Optional<BoardJpo> findById(String title);
 }

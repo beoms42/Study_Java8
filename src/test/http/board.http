@@ -7,6 +7,19 @@ Content-Type: application/json
   "content": "Cho Young-In"
 }
 
-### 보드 탐
+### 보드 탐색
 GET http://localhost:6296/board/findAll
+Content-Type: application/json
+
+### 보드 업데이트
+PUT http://localhost:6296/board/update
+Content-Type: application/json
+
+{
+  "title": "sangNamJa",
+  "content": "Chooo Young-In"
+}
+
+### 보드 삭제
+DELETE http://localhost:6296/board/delete/{title}
 Content-Type: application/json

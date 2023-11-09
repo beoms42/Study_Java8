@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Repository
@@ -26,4 +27,23 @@ public class BoardJpaStore implements BoardStore {
     public void save(BoardJpo boardJpo) {
         boardRepository.save(boardJpo);
     }
+
+    @Override
+    public void deleteById(String title) {
+        boardRepository.deleteById(title);
+    }
+
+    @Override
+    public void update(Board board) {
+        BoardJpo boardJpo = boardRepository.findById(board.getTitle()).orElseThrow(() -> new IllegalArgumentException("error"));
+        boardJpo.setContent(board.getContent());
+        boardRepository.save(boardJpo);
+    }
+
+    @Override
+    public Optional<BoardJpo> findById(String title) {
+        return Optional.empty();
+    }
+
+
 }

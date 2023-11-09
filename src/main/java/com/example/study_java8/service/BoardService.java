@@ -23,4 +23,13 @@ public class BoardService {
     public List<Board> findAll() {
         return boardStore.findAllBoards();
     }
+
+    public void deleteOne(String title) {
+        boardStore.deleteById(title);
+    }
+
+    public void updateOne(Board board){
+        System.out.println("board = " + board.toString());
+        boardStore.update(board);
+    }
 }

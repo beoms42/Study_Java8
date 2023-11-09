@@ -1,0 +1,12 @@
+### 보드 등록
+GET http://localhost:6296/board/save
+Content-Type: application/json
+
+{
+  "title": "sangNamJa",
+  "content": "Cho Young-In"
+}
+
+### 보드 탐
+GET http://localhost:6296/board/findAll
+Content-Type: application/json

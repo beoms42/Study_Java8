@@ -9,6 +9,4 @@ import java.util.List;
 public interface BoardRepository extends CrudRepository<BoardJpo, String> {
 
     List<BoardJpo> findAll();
-
-
 }
